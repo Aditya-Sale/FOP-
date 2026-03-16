@@ -1,1 +1,91 @@
+#include <stdio.h>
 
+int add(int a, int b);
+int sub(int a, int b);
+int mul(int a, int b);
+float divi(int a, int b);
+long factorial(int n);
+
+int main()
+{
+    int choice, a, b, n;
+
+    printf("1. Addition\n");
+    printf("2. Subtraction\n");
+    printf("3. Multiplication\n");
+    printf("4. Division\n");
+    printf("5. Factorial\n");
+
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    switch(choice)
+    {
+        case 1:
+            printf("Enter two numbers: ");
+            scanf("%d %d", &a, &b);
+            printf("Addition = %d", add(a,b));
+            break;
+
+        case 2:
+            printf("Enter two numbers: ");
+            scanf("%d %d", &a, &b);
+            printf("Subtraction = %d", sub(a,b));
+            break;
+
+        case 3:
+            printf("Enter two numbers: ");
+            scanf("%d %d", &a, &b);
+            printf("Multiplication = %d", mul(a,b));
+            break;
+
+        case 4:
+            printf("Enter two numbers: ");
+            scanf("%d %d", &a, &b);
+            printf("Division = %.2f", divi(a,b));
+            break;
+
+        case 5:
+            printf("Enter a number: ");
+            scanf("%d", &n);
+            printf("Factorial = %ld", factorial(n));
+            break;
+
+        default:
+            printf("Invalid choice");
+    }
+
+    return 0;
+}
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+int sub(int a, int b)
+{
+    return a - b;
+}
+
+int mul(int a, int b)
+{
+    return a * b;
+}
+
+float divi(int a, int b)
+{
+    return (float)a / b;
+}
+
+long factorial(int n)
+{
+    int i;
+    long fact = 1;
+
+    for(i = 1; i <= n; i++)
+    {
+        fact = fact * i;
+    }
+    return fact;
+}
