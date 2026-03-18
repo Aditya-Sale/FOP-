@@ -1,1 +1,2 @@
-
+// least common divisor(LCD)
+include<stdio.h>
